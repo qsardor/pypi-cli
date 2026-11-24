@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pypi-cli"
+version = "0.0.1"
+description = "Machine-first, token-efficient PyPI CLI for developers and autonomous AI agents."
+readme = "README.md"
+authors = [
+    { name = "Antigravity & Q.S@RDOR" }
+]
+license = "MIT"
+requires-python = ">=3.8"
+keywords = ["pypi", "cli", "agent", "llm", "packaging", "pep691", "token-efficient"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: System :: Archiving :: Packaging",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/qsardor/pypi-cli"
+Repository = "https://github.com/qsardor/pypi-cli"
+Issues = "https://github.com/qsardor/pypi-cli/issues"
+
+[project.scripts]
+pypi = "pypi_cli.cli:main"
+pypi-cli = "pypi_cli.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pypi_cli"]
